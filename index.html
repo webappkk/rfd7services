@@ -1,50 +1,11 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base target="_top">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <style>
-        .header {
-            display: flex;
-            align-items: center;
-            background-color: #ddd;
-            padding: 10px;
-        }
-
-        .text {
-            font-size: 1em;
-            margin-left: 10px;
-            margin-right: auto;
-        }
-
-        .close_button {
-            cursor: pointer;
-        }
-
-        .iframe-container {
-            margin-top: 50px; /* ปรับ margin-top แทน top */
-            height: calc(100vh - 50px); /* ใช้ vh แทน % */
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <i class="bi bi-globe"></i>
-        <span class="text" id="headerText">ระบบแจ้งซ่อม สำนักจัดการทรัพยากรป่าไม้ที่ 7 (ขอนแก่น)</span>
-        <span class="close_button" onclick="closeHeader()">X</span>
-    </div>
-
-    <div class="iframe-container">
-        <iframe style="width: 100%; height: 100%; border: 0;" src="https://script.google.com/macros/s/AKfycbx1Zo1j0PbkXbpMf36a386z6Y6xUpzV22Slbc_kLj7XIyT01tuB3YjtE1ihqvxV123QUw/exec"></iframe>
-    </div>
-
-    <script>
-        function closeHeader() {
-            document.querySelector(".header").style.display = "none";
-            document.querySelector(".iframe-container").style.marginTop = "0";
-            document.querySelector(".iframe-container").style.height = "100vh";
-        }
-    </script>
-</body>
+   <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+      <base target="_top">
+   </head>
+   <body>
+      <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;border: 0;" src="https://script.google.com/macros/s/AKfycbx1Zo1j0PbkXbpMf36a386z6Y6xUpzV22Slbc_kLj7XIyT01tuB3YjtE1ihqvxV123QUw/exec"></iframe>
+   </body>
 </html>
