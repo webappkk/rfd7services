@@ -1,9 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Web App</title>
     <base target="_top">
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* สไตล์ไตเติ้ลบาร์ */
+        .title-bar {
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .title-bar .title {
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .title-bar img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .title-bar .controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .control-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+        }
+
+        /* ป้องกัน iframe ชนไตเติ้ลบาร์ */
+        .iframe-container {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 40px);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ปุ่มติดต่อนักพัฒนา */
         .contact-button {
             position: fixed;
             bottom: 20px;
@@ -18,16 +88,45 @@
     </style>
 </head>
 <body>
-    <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;border: 0;" src="https://script.google.com/macros/s/AKfycbx1Zo1j0PbkXbpMf36a386z6Y6xUpzV22Slbc_kLj7XIyT01tuB3YjtE1ihqvxV123QUw/exec"></iframe>
 
+    <!-- แถบไตเติ้ลบาร์ -->
+    <div class="title-bar">
+        <div class="title">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="App Icon">
+            My Web App
+        </div>
+        <div class="controls">
+            <button class="control-btn" onclick="minimize()">➖</button>
+            <button class="control-btn" onclick="maximize()">🔳</button>
+            <button class="control-btn" onclick="closeWindow()">❌</button>
+        </div>
+    </div>
+
+    <!-- Iframe แสดงเนื้อหา -->
+    <div class="iframe-container">
+        <iframe src="https://script.google.com/macros/s/AKfycbx1Zo1j0PbkXbpMf36a386z6Y6xUpzV22Slbc_kLj7XIyT01tuB3YjtE1ihqvxV123QUw/exec"></iframe>
+    </div>
+
+    <!-- ปุ่มติดต่อนักพัฒนา -->
     <button class="contact-button" onclick="contactDeveloper()">ติดต่อนักพัฒนา</button>
 
     <script>
+        function minimize() {
+            alert("ฟังก์ชันย่อหน้าต่างสามารถใช้งานได้ในแอปเดสก์ท็อป");
+        }
+
+        function maximize() {
+            alert("ฟังก์ชันขยายหน้าต่างสามารถใช้งานได้ในแอปเดสก์ท็อป");
+        }
+
+        function closeWindow() {
+            window.close();
+        }
+
         function contactDeveloper() {
-            // เพิ่มโค้ดสำหรับการติดต่อนักพัฒนาที่นี่
-            alert("กรุณาติดต่อผ่านอีเมล: developer@example.com"); // ตัวอย่าง: แสดงข้อความแจ้งเตือน
-            // หรือใช้ window.location.href = "mailto:developer@example.com"; เพื่อเปิดโปรแกรมอีเมล
+            alert("กรุณาติดต่อผ่านอีเมล: developer@example.com");
         }
     </script>
+
 </body>
 </html>
