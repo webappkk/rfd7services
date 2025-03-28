@@ -58,21 +58,6 @@
             border-radius: 3px;
         }
 
-        /* ป้องกัน iframe ชนไตเติ้ลบาร์ */
-        .iframe-container {
-            position: absolute;
-            top: 40px;
-            left: 0;
-            width: 100%;
-            height: calc(100% - 40px);
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
         /* ปุ่มติดต่อนักพัฒนา */
         .contact-button {
             position: fixed;
@@ -88,20 +73,7 @@
     </style>
 </head>
 <body>
-
-    <!-- แถบไตเติ้ลบาร์ -->
-    <div class="title-bar">
-        <div class="title">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="App Icon">
-            ระบบแจ้งซ่อม สำนักจัดการทรัพยากรป่าไม้ที่ 7 (ขอนแก่น)
-        </div>
-        <div class="controls">
-            <button class="control-btn" onclick="minimize()">➖</button>
-            <button class="control-btn" onclick="maximize()">🔳</button>
-            <button class="control-btn" onclick="closeWindow()">❌</button>
-        </div>
-    </div>
-
+    
     <!-- Iframe แสดงเนื้อหา -->
     <div class="iframe-container">
         <iframe src="https://script.google.com/macros/s/AKfycbx1Zo1j0PbkXbpMf36a386z6Y6xUpzV22Slbc_kLj7XIyT01tuB3YjtE1ihqvxV123QUw/exec"></iframe>
